@@ -1,19 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 :root {
     --bg-color:rgb(7, 11, 21);
-    --border-color:rgb(255,255,255,0.1)
+    --border-color:rgba(255,255,255,0.21)
 }
 * {
-    box-sizing: border-box;
     margin:0;
     padding:0;
+    scroll-behavior: smooth;
+    font-family: "Electrolize", sans-serif;
 }
 body {
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
-    height: 100px;
+    height: 100vh;
     margin: 0px;
-    overflow: hidden;
+    /* overflow: hidden;      HIDDEN SKA VARA PÅ MEN VI FÅR HITTA ANNAT SÄTT ATT MAN FÅR HELA CONTENT I BILD UTAN ATT SKROLLA!!! */
+    box-sizing: border-box;
 }
 main { 
     flex-grow: 1;
@@ -24,7 +27,7 @@ main > article {
     height: 100%;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 2fr 1fr;
-    position: absolute;
+    position: relative;
     left: 0px;
     top: 0px;
 }
@@ -43,40 +46,70 @@ main > article > .article-title-section, main > article > .article-nav-section {
 }
 .nav-products {
     display: flex;
-    width: 100%;
+    width: 100vw;
     border-bottom: 1px solid var(--border-color);
 }
 .nav-products > .nav-section {
     padding: 3rem 2rem;
     display: flex;
-    gap: 1rem;
     border-left: 1px solid var(--border-color);
     align-items: center;
     justify-content: center;
 }
-#nav-logo-section, #nav-link-section {
-    flex-basis: calc(100% / 3);
-}
-#nav-social-section, #nav-contact-section {
+#nav-home {
     flex-grow: 1;
 }
-#nav-social-section {
-    justify-content: flex-start;
+#nav-home {
+    display: flex;
+    justify-content: space-between;
 }
-#nav-logo-section > a > i {
+#nav-home > a > i {
     font-size: 2.5rem;
 }
-#nav-link-section {
-    gap: 6rem;
-}
-#nav-social-section {
-    gap: 3rem;
-}
 h1, h2, h3, a, p, span {
-    font-family: "Rubik", sans-serif;
     font-weight: 400;
     color: white;
 }
 a {
     text-decoration: none;
 }
+.article-nav-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 5px solid red;
+}
+.article-right-nav, 
+.article-left-nav {
+    font-size: 74px;
+    cursor: pointer;
+}
+
+article[data-index="0"] > .article-image-description {
+	background-image: url("/IMAGES/11.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+article[data-index="1"] > .article-image-description {
+	background-image: url("/IMAGES/22.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+article[data-index="2"] > .article-image-description {
+	background-image: url("/IMAGES/33.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+article[data-index="3"] > .article-image-description {
+	background-image: url("/IMAGES/44.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+article[data-status="becoming-active-from-before"] {
+    transform: translateX(-100%);
+    transition: none;
+} 
