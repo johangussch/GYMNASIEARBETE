@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+* {
+  font-family: "Electrolize", sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+.nav-login {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 14px black;
+    height: 64px;
+}
+nav li {
+    display: none;
+}
+.logo {
+    margin-left: 2.5%;
+    font-size: 24px;
+}
+main {
+    background-image: url(/IMAGES/background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 11vh;
+    height: 100%;
+}
+.signup-header {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s;
+    color: white;
+}
+@keyframes fadeIn {
+from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+}
+to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+}
+.formContainer {
+    padding: 16px;
+    width: 40vw;
+    background-color: rgb(29, 29, 29);
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px black;
+    margin-bottom: 20vh;
+    height: 30vh;
+}
+.labels {
+    color: white;
+    padding: 5px 0px 5px 0px;
+}
+.agreement {
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.terms {
+    color: rgb(0, 247, 255);
+    background-color: rgb(29, 29, 29);
+    font-size: 11px;
+}
+input[type="email"],
+input[type="password"] {
+  font-size: 11px;
+  padding: 7px;
+  border: none;
+  display: flex;
+  width: 94%;
+}
+button {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(10, 119, 13);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+.buttons{
+    cursor: pointer;
+    background-color: rgb(154, 0, 0);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.buttons:hover {
+    background-color: rgb(84, 0, 0);
+}
+.title {
+    margin-left: 1%;
+    font-weight: bold;
+    font-size: 4vh;
+    margin-top: 2px;
+}
+.fa-solid-fa-check-double {
+    color: red;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+}
+form {
+    display: flex;
+    justify-content: center;
+}
+footer {
+    height: 24vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+    color: white;
+    font-weight: bold;
+    border-top: 2px solid black;
+}
