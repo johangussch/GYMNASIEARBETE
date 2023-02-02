@@ -81,7 +81,7 @@ h2, p, .italic {
     display: flex;
     border: 3px solid green;
     margin: auto;
-    padding: 31vh 29vw 31vh 29vw;
+    padding: 29vh 27vw 29vh 27vw;
 }
 .product-title {
     border: 3px solid red;
