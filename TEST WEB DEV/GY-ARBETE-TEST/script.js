@@ -3,8 +3,9 @@ let activeIndex = 0;
 const articles = document.querySelectorAll("article");
 
 const GoLeft = () => {
-    const nextIndex = activeIndex - 1 >= 0? activeIndex - 1 : articles.length - 1;
-    
+    const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articles.length - 1;
+
+
     const currentArticle = document.querySelector(`[data-index="${activeIndex}"]`),
     nextArticle = document.querySelector(`[data-index="$(nextIndex)"]`);
     
@@ -15,13 +16,13 @@ const GoLeft = () => {
     console.log("LEFT LEFT LEFT");
 
     setTimeout(() => {
-        nextArticle.dataset.stats = "active";
+        nextArticle.dataset.status = "active";
         activeIndex = nextIndex;
-    });
+    }); 
 }
 const GoRight = () => { 
     const nextIndex = activeIndex + 1 <= articles.length - 1 ? activeIndex + 1 : 0;
-    
+                            
     const currentArticle = document.querySelector(`[data-index="${activeIndex}"]`),
 		nextArticle = document.querySelector(`[data-index="${nextIndex}"]`);
 	
@@ -30,12 +31,12 @@ const GoRight = () => {
     currentArticle.dataset.status = "after"
 	
         //Next article element/page
-	nextArticle.dataset.status = "becoming-active-from-after"
+	nextArticle.dataset.status = "becoming-active-from-before"
     
     console.log("RIGHT RIGHT RIGHT");
 
     setTimeout(() => {
-        nextArticle.dataset.stats = "active";
+        nextArticle.dataset.status = "active";
         activeIndex = nextIndex;
     });
 }
