@@ -2,6 +2,8 @@ let activeIndex = 0;
 
 const articles = document.querySelectorAll("article");
 
+let nextIndex = 0;
+
 const GoLeft = () => {
     const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : articles.length - 1;
 
