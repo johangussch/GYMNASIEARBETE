@@ -86,6 +86,11 @@ h2, p, .italic {
     background: transparent;
     border: none;
 }
+.fa-left-long:hover, .fa-right-long:hover {
+    color: red;
+    transition: 0.4s;
+    opacity: 1;
+}
 img {
     border: 3px solid green;
     margin: auto;   
@@ -98,19 +103,17 @@ img {
     align-items: center;
     padding-left: 2vw;
 }
-/* article {
+article {
     position: absolute;
     transform: 400ms ease;
-} */
-
-article[data-status="becoming-active-from-before"] {
+}
+article[data-status="becoming-active-from-before"], article[data-status="becoming-active-from-after"] {
     transform: translateX(-50%) scale(0);
     transition: none;
 } 
-article[data-status="after"] {
+article[data-status="before"], article[data-status="after"] {
     transform: translateX(50%) scale(0);
 }
-
 article[data-status="inactive"] {
     display: none;
 }
