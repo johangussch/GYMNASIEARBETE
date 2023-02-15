@@ -105,3 +105,6 @@ footer {
     font-weight: bold;
     border-top: 2px solid black;
 }
+p:hover {
+    cursor: pointer;
+}

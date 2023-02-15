@@ -1,131 +1,174 @@
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
-:root {
-    --bg-color:rgb(7, 11, 21);
-    --border-color:rgba(255,255,255,0.21)
-}
 * {
-    margin:0;
-    padding:0;
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
     font-family: "Electrolize", sans-serif;
+    scroll-behavior: smooth;
 }
-body {
-    background-color: var(--bg-color);
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0px;
-    overflow: hidden;      
-    box-sizing: border-box;
-}
-/* HIDDEN SKA VARA PÅ MEN VI FÅR HITTA ANNAT SÄTT ATT MAN FÅR HELA CONTENT I BILD UTAN ATT SKROLLA!!! */ 
-main { 
-    flex-grow: 1;
-    position: relative;
-}
-main > article {
+article {
     display: grid;
-    height: 75%;
-    /* FIXA HEIGHT */
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    position: relative;
-    left: 0px;
-    top: 0px;
+    position: absolute;
 }
-main > article[data-status="inactive"] {
-    transform: translateX(-100%);
+.left-panel {
+    /* border: 3px solid blue; */
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr 2fr;
+}  
+.right-panel {
+    /* border: 3px solid blue; */
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr 2fr;
+}  
+.logo {
+    padding-left: 2vw;
+    border: none;
+    background-color: transparent;
 }
-main > article > .article-section {
-    height: 100%;
-    border: 1px solid var(--border-color);
+.logo > button {
+    border: none;
 }
-/* main > article > .article-description-section, main > article > .article-nav-section {
-    border-left: 1px solid var(--border-color);
+.fa-check-double {
+    color: black;
+    font-size: 32px;
 }
-main > article > .article-title-section, main > article > .article-nav-section {
-    border-top: 1px solid var(--border-color);
-} */
-.nav-products {
-    display: flex;
-    width: 100vw;
-    border-bottom: 1px solid var(--border-color);
+.home {
+    margin-right: 2vw;
 }
-.nav-products > .nav-section {
-    padding: 3rem 2rem;
-    display: flex;
-    border-left: 1px solid var(--border-color);
-    align-items: center;
-    justify-content: center;
-}
-#nav-home {
-    flex-grow: 1;
-}
-#nav-home {
-    display: flex;
+.nav-left {
     justify-content: space-between;
 }
-#nav-home > a > i {
-    font-size: 2.5rem;
+.nav-right {
+    justify-content: space-around;
+}  
+.nav-left, .nav-right {
+    display: flex;
+    border: 3px solid red;
+    align-items: center;
+    height: 11vh;
 }
-h1, h2, h3, a, p, span {
-    font-weight: 400;
-    color: white;
+.nav-cart, .nav-account, .home {
+    padding: 1vh 2vw 1vh 2vw;
+    background-color: gray;
 }
 a {
     text-decoration: none;
-}
-.article-nav-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;    
-}
-.article-right-nav, 
-.article-left-nav {
-    font-size: 74px;
-    cursor: pointer;
-    background: transparent;
     color: white;
-    border: none;
+    cursor: pointer;
 }
-article[data-index="0"] > .article-image-description {
-	background-image: url("/IMAGES/11.png");
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
-}
-article[data-index="1"] > .article-image-description {
-	background-image: url("/IMAGES/22.png");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-}
-article[data-index="2"] > .article-image-description {
-	background-image: url("/IMAGES/33.png");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-}
-article[data-index="3"] > .article-image-description {
-	background-image: url("/IMAGES/44.png");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
-}
-.product-description {
-    padding: 2vh;
+button, .italic {
+    cursor: pointer;
+    border-radius: 0.5vh;
+    background: transparent;
+    color:white;
+} 
+.description {
     display: flex;
     flex-direction: column;
+    padding: 4vh;
+    border: 3px solid blue;
 }
-.product-description > p {
-    display: column;
-    justify-content: flex-end;
+h2, p, .italic {
+    margin: auto;
 }
-article[data-status="becoming-active-from-before"] {
-    transform: translateX(-100%);
-    transition: none;
-} 
-.article-title-section {
+.italic {
+    color: black;
+}
+.arrow-nav {
+    border: 3px solid red;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+.arrow-nav > button {
+    font-size: 72px;
+    background: transparent;
+    border: none;
+    color:black;
+}
+.fa-left-long:hover, .fa-right-long:hover {
+    color: red;
+    transition: 0.4s;
+    opacity: 1;
+}
+img {
+    border: 3px solid green;
+    margin: auto;   
+    width: 63vw;
+    height: 60vh;
+}
+.product-title {
+    /* border: 3px solid red; */
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+}
+h3 {
+    display: none;
+}
+/* SLIDES LOGIC */
+
+article {
+    position: absolute;
+    transform: 400ms ease;
+}
+article[data-status="becoming-active-from-before"], article[data-status="becoming-active-from-after"] {
+    transform: translateX(-50%) scale(0);
+    transition: none;
+} 
+article[data-status="before"], article[data-status="after"] {
+    transform: translateX(50%) scale(0);
+}
+article[data-status="inactive"] {
+    display: none;
+}
+
+/* MEDIA QUIERIES */
+
+@media only screen and (max-width: 768px) {
+    h3 {
+        display: none;
+    }
+    h1 {
+        display: block;
+        border-bottom: 3px solid black;
+        padding-bottom: 0.5vh;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        height: 0vh;
+    }
+    .nav-right {
+        display:none;
+    }
+    .description {
+        padding: 0 2vw 0 2vw;
+        border: none;
+    }
+    .product-title {
+        height: 5vh;
+    }
+    p {
+        padding-bottom: 10vh;
+    }
+    .left-panel {
+        height: 75vh;
+    }
+    .product-image {
+        padding-top: 1vh;
+        border: none;
+    }
+    img {
+        width: 96vw;
+        height: 37vh;
+    }
+    .arrow-nav {
+        height: 15vh;
+    }
+    .nav-left, .nav-right {
+        height: 8vh;
+    }
 }
