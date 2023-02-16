@@ -39,6 +39,7 @@ article {
 }
 .nav-left {
     justify-content: space-between;
+
 }
 .nav-right {
     justify-content: space-around;
@@ -108,12 +109,18 @@ img {
 h3 {
     display: none;
 }
+.nav-links {
+    display: none;
+    position: fixed;
+}
+.fa-bars {
+    cursor: pointer;
+}
 /* SLIDES LOGIC */
 
-article {
+/* article {
     position: absolute;
-    transform: 400ms ease;
-}
+} */
 article[data-status="becoming-active-from-before"], article[data-status="becoming-active-from-after"] {
     transform: translateX(-50%) scale(0);
     transition: none;
@@ -128,18 +135,14 @@ article[data-status="inactive"] {
 /* MEDIA QUIERIES */
 
 @media only screen and (max-width: 768px) {
-    h3 {
-        display: none;
-    }
     h1 {
         display: block;
         border-bottom: 3px solid black;
-        padding-bottom: 0.5vh;
     }
     article {
         display: flex;
         flex-direction: column;
-        height: 0vh;
+        height: 100vh;
     }
     .nav-right {
         display:none;
@@ -147,15 +150,19 @@ article[data-status="inactive"] {
     .description {
         padding: 0 2vw 0 2vw;
         border: none;
-    }
-    .product-title {
-        height: 5vh;
-    }
-    p {
-        padding-bottom: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 35vh;
     }
     .left-panel {
-        height: 75vh;
+        height: 50vh;
+    }
+    .right-panel {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .product-image {
         padding-top: 1vh;
@@ -163,12 +170,31 @@ article[data-status="inactive"] {
     }
     img {
         width: 96vw;
-        height: 37vh;
+        height: 34vh;
     }
     .arrow-nav {
-        height: 15vh;
+        height: 14vh;
     }
     .nav-left, .nav-right {
         height: 8vh;
     }
+    .mobile-nav-account, .mobile-nav-cart {
+        padding: 1vh 2vw 1vh 2vw;
+        background-color: gray;
+    }
+    .burger-menu {
+        font-size: 32px;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2vw;
+    }
+    .burger-active {
+        display: block;
+        border: 2px solid red;
+        height: 50vh;
+    }
+    /* .burger-menu {
+        margin-right: 30vw;
+        margin-top: 13vh;
+    } */
 }

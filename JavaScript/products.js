@@ -1,5 +1,12 @@
-let activeIndex = 0;
+// BURGER MENU EVENT
 
+const burger = () => {
+    const nav = document.querySelector(".nav-links");
+    nav.classList.toggle("burger-active");
+}
+
+// ARROW NAVIGATION EVENT
+let activeIndex = 0;
 const articles = document.querySelectorAll("article");
 
 const GoLeft = () => {
