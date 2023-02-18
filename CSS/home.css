@@ -10,9 +10,7 @@
     scroll-behavior: smooth;
 }
 body {
-    align-items: center;
     background-color: var(--bg-color);
-    justify-content: center;
 }
 main {
     display: flex;
@@ -20,43 +18,47 @@ main {
     height: 92vh;
     align-items: center;
 }
-.nav-login {
+.nav {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     background-color: rgb(0, 0, 0);
     box-shadow: 0px 0px 14px black;
-    height: 11vh;
-}
-nav li {
-    display: none;
+    height: 8vh;
 }
 .logo {
-    margin-left: 2.5%;
+    margin-left: 2rem;
+    display: flex;
+    gap: 1.25rem;
     font-size: 24px;
 }
 .title {
-    margin-left: 1%;
     font-weight: bold;
-    font-size: 4vh;
-    margin-top: 2px;
+}
+.nav-account {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    font-size: 16px;
+    background-color: none;
+    padding: 1vh 2vw 1vh 2vw;
+    background-color: gray;
+    border-radius: 0.5vh;
 }
 a {
     text-decoration: none;
     color: white;
-    font-size: 3vh;
 }
-#cards {
+.cards {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    max-width: 916px;
-    width: calc(100%-20px);
+    flex-direction: row;
+    gap: 2vw;
+    margin-bottom: 25vh;
 }
-#cards:hover > .card > .card-border {
+/* .cards:hover > .card > .card-border {
     opacity: 1;
-}
+} */
 .card {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -64,11 +66,16 @@ a {
     height: 260px;
     position: relative;
     width: 300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
 }
-.card:hover::before {
+/* .card:hover::before {
     opacity: 1;
-}
-.card::before,
+} */
+/* .card::before,
 .card > .card-border {
     background: radial-gradient(
     800px circle at var(--mouse-x) var(--mouse-y),
@@ -84,7 +91,7 @@ a {
     top: 0px;
     transition: opacity 500ms;
     width: 100%;
-}
+} */
 .card::before {
     background: radial-gradient(
     800px circle at var(--mouse-x) var(--mouse-y),
@@ -101,7 +108,7 @@ a {
     );
     z-index: 1;
 }
-.card > .card-border {
+/* .card > .card-border {
     background-color: var(--card-color);
     border-radius: inherit;
     height: calc(100%-2px);
@@ -109,8 +116,7 @@ a {
     position: relative;
     width: calc(100%-2px);
     z-index: 2;
-    
-}
+} */
 footer {
     height: 24vh;
     display: flex;
@@ -123,4 +129,18 @@ footer {
     color: white;
     font-weight: bold;
     border-top: 2px solid black;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 940px) {
+    .cards {
+        flex-direction: column;
+        gap: 3vw;
+        margin-bottom: 0;
+    }
+    .card {
+        height: 200px;
+        width: 300px;
+    }
 }

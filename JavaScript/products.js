@@ -1,5 +1,4 @@
 // BURGER MENU EVENT
-
 const burger = () => {
     const nav = document.querySelector(".nav-links");
     nav.classList.toggle("burger-active");

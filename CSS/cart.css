@@ -6,7 +6,7 @@
     font-family: "Electrolize", sans-serif;
 }
 body {
-    background-color: rgb(170, 170, 170);
+    /* background-color: rgb(170, 170, 170); */
 }
 main {
     display: flex;
@@ -15,7 +15,7 @@ main {
     height: 100vh;
 }
 .nav-cart {
-    height: 11vh;
+    height: 8vh;
     border: 1px solid red;
     display: flex;
     align-items:center;
@@ -27,6 +27,8 @@ main {
     gap: 1.25rem;
     margin-left: 2rem;
     cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
 }
 .username {
     margin-right: 2rem;
@@ -90,9 +92,11 @@ main {
     font-size: 24px;
 }
 .confirm > button {
-    padding: 1.5vh 3vw 1.5vh 3vw;
     border-radius: 8px;
     cursor: pointer;
+    padding: 1vh 2vw 1vh 2vw;
+    background-color: gray;
+    color: white;
 }
 footer {
     height: 24vh;
