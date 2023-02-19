@@ -56,67 +56,44 @@ a {
     gap: 2vw;
     margin-bottom: 25vh;
 }
-/* .cards:hover > .card > .card-border {
-    opacity: 1;
-} */
 .card {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     cursor: pointer;
     height: 260px;
-    position: relative;
-    width: 300px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    width: 430px;
     color: white;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-/* .card:hover::before {
-    opacity: 1;
-} */
-/* .card::before,
-.card > .card-border {
-    background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.06), 
-    transparent 40%
-    );
-    border-radius: inherit;
-    content: "";
-    height: 100%;
-    left: 0px;
-    opacity: 0;
+.card-content {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.24s;
     position: absolute;
-    top: 0px;
-    transition: opacity 500ms;
+    font-size: 34px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-content:hover {
+    transform: scale(1.5);
+    border-bottom: 3px solid white;
+}
+img {
+    height: 100%;
     width: 100%;
-} */
-.card::before {
-    background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.06), 
-    transparent 40%
-    );
-    z-index: 3;
+    border-radius: 10px;
+    opacity: 40%;
 }
-.card > .card-content {
-    background: radial-gradient(
-    400px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.3), 
-    transparent 40%
-    );
-    z-index: 1;
+img:hover {
+    opacity: 100%;
+    transition: opacity 1s;
 }
-/* .card > .card-border {
-    background-color: var(--card-color);
-    border-radius: inherit;
-    height: calc(100%-2px);
-    margin: 1px;
-    position: relative;
-    width: calc(100%-2px);
-    z-index: 2;
-} */
+.underline {
+    text-decoration: underline;
+}
 footer {
     height: 24vh;
     display: flex;
@@ -142,5 +119,11 @@ footer {
     .card {
         height: 200px;
         width: 300px;
+    }
+    .card-content {
+        font-size: 24px;
+    }
+    main {
+        margin-top: -4vh;
     }
 }
