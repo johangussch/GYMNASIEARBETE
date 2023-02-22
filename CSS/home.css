@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 :root {
     --bg-color: rgb(20, 20, 20);
-    --card-color: rgb(23, 23, 23);
 }
 * {
     font-family: "Electrolize", sans-serif;
@@ -23,9 +22,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(92, 0, 0);
     box-shadow: 0px 0px 14px black;
     height: 8vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
 }
 .logo {
     margin-left: 2rem;
@@ -55,6 +55,7 @@ a {
     flex-direction: row;
     gap: 2vw;
     margin-bottom: 25vh;
+    width: 90%;
 }
 .card {
     background-color: rgba(255, 255, 255, 0.1);
