@@ -17,15 +17,15 @@ main {
     height: 92vh;
     align-items: center;
 }
-.nav {
+.nav-home {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(92, 0, 0);
     box-shadow: 0px 0px 14px black;
-    height: 8vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+    height: 8vh;
 }
 .logo {
     margin-left: 2rem;
@@ -36,9 +36,7 @@ main {
 .title {
     font-weight: bold;
 }
-.nav-account {
-    display: flex;
-    justify-content: flex-end;
+.nav-account, .nav-cart {
     margin-right: 2rem;
     font-size: 16px;
     background-color: none;
@@ -56,9 +54,9 @@ a {
     gap: 2vw;
     margin-bottom: 25vh;
     width: 90%;
+    justify-content: space-around;
 }
 .card {
-    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     cursor: pointer;
     height: 260px;
@@ -114,8 +112,9 @@ footer {
 @media only screen and (max-width: 940px) {
     .cards {
         flex-direction: column;
-        gap: 3vw;
+        gap: 3vh;
         margin-bottom: 0;
+        align-items: center;
     }
     .card {
         height: 200px;
@@ -124,7 +123,10 @@ footer {
     .card-content {
         font-size: 24px;
     }
-    main {
-        margin-top: -4vh;
+    .logo, .nav-account {
+        margin: 4vw;
+    }
+    .title {
+        display: none;
     }
 }

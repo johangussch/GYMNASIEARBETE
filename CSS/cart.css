@@ -5,9 +5,6 @@
     scroll-behavior: smooth;
     font-family: "Electrolize", sans-serif;
 }
-body {
-    /* background-color: rgb(170, 170, 170); */
-}
 main {
     display: flex;
     justify-content: center;
@@ -16,10 +13,13 @@ main {
 }
 .nav-cart {
     height: 8vh;
-    border: 1px solid red;
     display: flex;
     align-items:center;
     justify-content: space-between;
+    background-color: rgb(92, 0, 0);
+    box-shadow: 0px 0px 14px black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+    color: white;
 }
 .back {
     display: flex;
