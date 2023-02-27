@@ -43,6 +43,8 @@ main {
     padding: 1vh 2vw 1vh 2vw;
     background-color: gray;
     border-radius: 0.5vh;
+    cursor: pointer;
+    color: white;
 }
 a {
     text-decoration: none;
