@@ -16,7 +16,7 @@
         <nav class="nav-cart">
             <div class="back" onclick="history.back()">
                 <i class="fas fa-arrow-left"></i>
-                <p>Go back</p>
+                <p class="back-text">Go back</p>
             </div>
             <div class="logo">
                 <a href="#">
@@ -30,7 +30,8 @@
         <div class="cart-board">
             <div class="cart-info">
                 <h1>CHECKOUT</h1>
-                <div></div>
+                <div class="extra-space1"></div>
+                <div class="extra-space2"></div>
                 <div class="info-quantity">Quantity</div>
                 <div class="info-price">Price</div>
             </div>
@@ -38,20 +39,21 @@
                 <div class="cart-card">
                     <div class="cart-symbols">
                         <i class="fas fa-trash"></i>
+                        <div class="item-name">name</div>
                         <img class="item-pic" src="/IMAGES/apparel.jpg"></img>
                         <div class="quantity-icons">
-                            <i class="fas fa-plus-circle"></i>
-                            <div class="counter">[$i]</div>
-                            <i class="fas fa-minus-circle"></i>
+                            <i class="fas fa-minus-circle" onclick="remove()"></i>
+                            <div class="counter"><span id="counter">0</span></div>
+                            <i class="fas fa-plus-circle" onclick="add()"></i>
                         </div>
-                        <div class="price">Price:</div>
+                        <div class="price">420</div>
                     </div>
                 </div>
             </div>
             <div class="payment">
                 <div class="total-price">
                     <p>Total price:</p>
-                    <i>$69</i>
+                    <div class="total-text"></div>
                 </div>
                 <div class="confirm">
                     <button type="submit">Confirm purchase</button>
@@ -61,6 +63,7 @@
     </main>
 
     <footer></footer>
+    <script defer src="/JavaScript/increment.js"></script>
     <script defer src="/JavaScript/account.js"></script>
 </body>
 </html>

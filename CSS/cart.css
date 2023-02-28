@@ -23,16 +23,21 @@ main {
 .back {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
     margin-left: 2rem;
     cursor: pointer;
-    font-size: 24px;
     font-weight: bold;
+}
+.fa-arrow-left, .back-text {
+    font-size: clamp(16px, 3vw, 24px);
 }
 .username {
     margin-right: 2rem;
     font-weight: bold;
-    font-size: 2vh;
+    font-size: clamp(14px, 3vw, 24px);
+}
+h1 {
+    font-size: clamp(24px, 3vw, 54px)
 }
 .cart-board {
     display: flex;
@@ -45,7 +50,7 @@ main {
     border-bottom: 1px solid black;
     align-items: center;
     padding-bottom: 0.5vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     justify-items: center;
     font-weight: bold;
@@ -64,12 +69,12 @@ main {
     width:100%;
 }
 .cart-card {
-    padding: 5vh 0vh 5vh 0vh;
+    padding: 2.5vh 0vh 2.5vh 0vh;
     border-bottom: 1px solid black;
 }
 .cart-symbols {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-items:center;
 }
@@ -79,7 +84,7 @@ main {
     gap: 2vw;
 }
 .item-pic {
-    height: 40px;
+    height: 9vh;
 }
 .payment {
     display: flex;
@@ -126,11 +131,8 @@ footer {
     font-weight: bold;
     border-top: 2px solid black;
 }
-p:hover {
-    cursor: pointer;
-}
 
-
+/* MEDIA QUERIES */
 
 @media only screen and (max-width: 768px) {
     .cart-board {
@@ -140,5 +142,41 @@ p:hover {
         display: flex;
         flex-direction: column;
         height: 30vh;
+    }
+    .item-pic {
+        height: 5.5vh
+    }
+    .back {
+        margin-left: 1rem;
+    }
+    .username {
+        margin-right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .cart-info {
+        justify-items: end;
+        grid-template-columns: 1fr 1fr 0.85fr;
+    }
+    .extra-space2, .extra-space1 {
+        display: none;
+    }
+    .cart-symbols {
+        justify-items:start;
+        grid-template-columns: 0.5fr 0.5fr 1.1fr 1fr 1fr;
+    }
+    .price {
+        margin-left: auto;
+    }
+    .item-pic {
+        height: 4vh
+    }
+}
+
+
+@media only screen and (max-width: 500px) and (min-width: 440px)  {
+    .quantity-icons {
+        margin-left: 10px;
     }
 }
