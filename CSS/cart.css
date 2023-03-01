@@ -107,6 +107,9 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+.total-text {
+    padding-top: 4px;
+}
 p {
     font-size: 24px;   
 }
@@ -117,6 +120,10 @@ p {
     background-color: gray;
     color: white;
     font-size: 24px;
+}
+button:hover {
+    background-color: darkgreen;
+    transition: 0.5s;
 }
 footer {
     height: 24vh;

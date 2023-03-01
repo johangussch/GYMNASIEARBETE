@@ -1,7 +1,14 @@
 // BURGER MENU EVENT
 const burger = () => {
-    const nav = document.querySelector(".nav-links");
-    nav.classList.toggle("burger-active");
+    const nav1 = document.querySelector(".nav-links-1");
+    const nav2 = document.querySelector(".nav-links-2");
+    const nav3 = document.querySelector(".nav-links-3");
+    const nav4 = document.querySelector(".nav-links-4");
+
+    nav1.classList.toggle("burger-active-1");
+    nav2.classList.toggle("burger-active-2");
+    nav3.classList.toggle("burger-active-3");
+    nav4.classList.toggle("burger-active-4");
 }
 
 // ARROW NAVIGATION EVENT
