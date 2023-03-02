@@ -53,7 +53,7 @@ article {
     box-shadow: 0px 0px 14px black;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
 }
-.nav-cart-1, .nav-cart-2, .nav-cart-3, .nav-cart-4, .nav-account, .nav-home {
+.nav-cart-1, .nav-cart-2, .nav-cart-3, .nav-cart-4, .nav-home {
     padding: 1vh 2vw 1vh 2vw;
     background-color: gray;
     transition-duration: 0.7s;
@@ -67,9 +67,9 @@ a {
     cursor: pointer;
 }
 button {
+    background: transparent;
     cursor: pointer;
     border-radius: 0.5vh;
-    background: transparent;
     color:white;
 } 
 .description {
@@ -219,7 +219,7 @@ article[data-status="inactive"] {
     .nav-left, .nav-right {
         height: 8vh;
     }
-    .mobile-nav-account, .mobile-nav-cart, .mobile-nav-home {
+    .mobile-nav-cart, .mobile-nav-home {
         padding: 1vh 2vw 1vh 2vw;
         background-color: gray;
     }

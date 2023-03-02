@@ -14,18 +14,19 @@
   <header>
     <nav class="nav-login">
       <div class="logo">
-        <a href="/HTML/home.html">
-          <div class="fa-solid fa-check-double"></div>
-        </a>
+        <a href="/HTML/home.html"><div class="fa-solid fa-check-double"></div></a>
+        <div class="title"><a href="/HTML/home.html">PREPPED</a></div>
       </div>
-      <div class="title"><a href="/HTML/home.html">PREPPED</a></div>
+      <div class="nav-home">
+        <a href="/HTML/home.html" tabindex="-1"><button class="nav-home-button">HOME</button></a>
+      </div>
     </nav>
   </header>
   <main>
     <div id="signup-container">
       <div class="signup-header">Login</div>
     </div>
-    <form method="post" action="/PHP/login.php">
+    <form action="/HTML/home.html">
       <div class="formContainer">
         <div class="labels"><label for="username">Username</label></div>
         <input type="Username" placeholder="Enter Username" name="Username" required />
@@ -35,11 +36,12 @@
           <label><input type="checkbox" checked="checked" name="remember" />
             Remember me</label>
         </div>
-        <button type="submit" value="Submit">Log in</button>
+        <button class="login-button"type="submit" value="Submit" onclick="login()">Log in</button>
       </div>
     </form>
   </main>
   <footer></footer>
+  <script defer src="/JavaScript/account.js"></script>
 </body>
 
 </html>

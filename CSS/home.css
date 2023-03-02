@@ -47,19 +47,49 @@ main {
     color: white;
 }
 .account-popup {
+    display: none;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     border: 2px solid red;
-    height: 175px;
-    width: 16.3%;
-    top: 8vh;
+    height: 200px;
+    width: clamp(150px, 16vw, 300px);
+    right: 0;
     background-color:rgb(0, 13, 25);
     position: fixed;
-    display: flex;
+    margin-right: 2rem;
+    top: 8vh;
     z-index: 1;
+}
+.popup-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    width: clamp(150px, 16vw, 300px);
     color: white;
+}
+.temp-logout {
     display: none;
+    padding: 1vh 2vw 1vh 2vw;
+    background-color: red;
+    color: white;
+    border-radius: 0.5vh;
+    cursor: pointer;
+}
+.account-status {
+    font-size: clamp(14px, 1.5vw, 24px);
+}
+.login {
+    padding: 1vh 2vw 1vh 2vw;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 0.5vh;
+    cursor: pointer;
+}
+.login-link {
+    flex-direction: column;
 }
 a {
     text-decoration: none;
@@ -145,5 +175,12 @@ footer {
     }
     .title {
         display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .account-popup {
+        margin-right: 0;
     }
 }

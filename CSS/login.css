@@ -8,19 +8,34 @@
 .nav-login {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     height: 8vh;
     background-color: rgb(92, 0, 0);
     box-shadow: 0px 0px 14px black;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
 }
-nav li {
-    display: none;
-}
 .logo {
-    margin-left: 2.5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2rem;
+    display: flex;
+    gap: 1.25rem;
     font-size: 24px;
+    font-weight: bold;
+}
+.nav-home {
+    margin-right: 2rem;
+}
+.nav-home-button {
+    padding: 1vh 2vw 1vh 2vw;
+    background-color: gray;
+    cursor: pointer;
+    border-radius: 0.5vh;
+    color:white;
+    margin-top: 0;
+    font-size: 16px;
 }
 main {
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
@@ -73,20 +88,19 @@ to {
 }
 input[type="username"],
 input[type="password"] {
-  font-size: 21px;
-  padding: 7px;
-  display: flex;
-  width: 98%;
+    font-size: clamp(16px, 4vw, 24px);
+    padding: 7px;
+    width: clamp(100px, 40vw, 600px);
 }
-button {
-    font-size: 21px;
+.login-button {
+    font-size: clamp(16px, 4vw, 24px);
     font-weight: bold;
     background-color: rgb(10, 119, 13);
     color: white;
     padding: 14px 20px;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: clamp(100px, 40vw, 600px);
     margin-top: 10px;
 }
 .buttons{
@@ -97,12 +111,6 @@ button {
 }
 .buttons:hover {
     background-color: rgb(84, 0, 0);
-}
-.title {
-    margin-left: 1%;
-    font-weight: bold;
-    font-size: 4vh;
-    margin-top: 2px;
 }
 a {
     text-decoration: none;

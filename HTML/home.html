@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/CSS/home.css">
         <script
-        src="https://kit.fontawesome.com/229ad52509.js"
-        crossorigin="anonymous"
+            src="https://kit.fontawesome.com/229ad52509.js"
+            crossorigin="anonymous"
         ></script>
         <title>Home</title>
     </head>
@@ -22,37 +22,40 @@
                     <a href="/HTML/cart.html"><button class="nav-cart">CART</button></a>
                     <button class="nav-account" onclick="account()">ACCOUNT</button>
                     <div class="account-popup">
-                        `You are now logged in as ${username}` 
-                        <div class="login"><a href="/HTML/login.html"></a></div>
+                        <div class="popup-box">
+                            <p class="account-status">You are not logged in.</p>
+                            <ul class="login-link">
+                                <a href="/HTML/login.html" class="login-switch"><button class="login">LOG IN</button></a><button class="temp-logout">LOG OUT</button>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
         </header>
         <main>
-            <div class="cards">
-                <div class="card">
+            <ul class="cards">
+                <li class="card">
                     <img class="powder-image" src="/IMAGES/powder.jpg">
                         <div class="card-content">
                             <a href="/HTML/products/powders.html">POWDERS</a>  
                         </div>
+                    </img>                    
+                </li>
+                <li class="card">
+                    <img class="equipment-image" src="/IMAGES/equipment.jpg">
+                        <div class="card-content">
+                            <a href="/HTML/products/equipment.html">EQUIPMENT</a>
+                        </div>
                     </img>
-                    
-                </div>
-                <div class="card">
-                        <img class="equipment-image" src="/IMAGES/equipment.jpg">
-                            <div class="card-content">
-                                <a href="/HTML/products/equipment.html">EQUIPMENT</a>
-                            </div>
-                        </img>
-                </div>
-                <div class="card">
+                </li>
+                <li class="card">
                     <img class="apparel-image" src="/IMAGES/apparel.jpg">
                         <div class="card-content">
                             <a href="/HTML/products/apparel.html">APPARREL</a>
                         </div>
                     </img>
-                </div>
-            </div>
+                </li>
+            </ul>
         </main>
 
         <footer></footer>
