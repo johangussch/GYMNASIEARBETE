@@ -78,11 +78,11 @@ h1 {
     margin:auto;
     width:100%;
 }
-.cart-card {
+.cart-card-1, .cart-card-2, .cart-card-3 {
     padding: 2.5vh 0vh 2.5vh 0vh;
     border-bottom: 1px solid black;
 }
-.cart-symbols {
+.cart-symbols{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
@@ -204,9 +204,9 @@ footer {
     }
     .cart-symbols {
         justify-items:start;
-        grid-template-columns: 0.5fr 0.5fr 1.1fr 1fr 1fr;
+        grid-template-columns: 0.5fr 0.8fr 0.7fr 1fr 1fr;
     }
-    .price {
+    .price-1, .price-2, .price-3 {
         margin-left: auto;
     }
     .item-pic {

@@ -65,3 +65,16 @@ document.querySelector(".remove-3").addEventListener("click", function () {
 document.querySelector(".confirm").addEventListener("click", function () {
   document.querySelector(".purchase").style.display = "block";
 });
+
+
+document.querySelector(".trash-1").addEventListener("click", function () {
+  document.querySelector(".cart-card-1").style.display = "none";
+});
+
+document.querySelector(".trash-2").addEventListener("click", function () {
+  document.querySelector(".cart-card-2").style.display = "none";
+});
+
+document.querySelector(".trash-3").addEventListener("click", function () {
+  document.querySelector(".cart-card-3").style.display = "none";
+});
