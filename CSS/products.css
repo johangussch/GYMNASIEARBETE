@@ -25,17 +25,21 @@ article {
     color: white;
 }  
 .logo {
-    padding-left: 2vw;
+    margin-left: clamp(0px, 3vw, 30px);
     border: none;
     background-color: transparent;
+    display: flex;
+    gap: 1.25rem;
+    font-size: 24px;
+    align-items: center;
+}
+.title {
+    font-weight: bold;
 }
 .fa-check-double {
     color: black;
     font-size: 32px;
     color: white;
-}
-.nav-home {
-    margin-right: 2vw;
 }
 .nav-left {
     justify-content: space-between;
@@ -54,12 +58,18 @@ article {
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
 }
 .nav-cart-1, .nav-cart-2, .nav-cart-3, .nav-cart-4, .nav-home {
-    padding: 1vh 2vw 1vh 2vw;
+    padding: 1vh 1vw 1vh 1vw;
     background-color: gray;
     transition-duration: 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.fa-cart-shopping {
-    margin-right: 10px;
+.fa-cart-shopping, .fa-house {
+    padding-right: 20px;
+}
+span {
+    margin-left: 5px;
 }
 a {
     text-decoration: none;
@@ -128,14 +138,26 @@ h3 {
     margin-right: 2vw;
     border: none;
 }
-.cart-text:hover {
-    text-decoration: underline;
-    text-underline-offset: 2vh;
-}
 .fa-cart-plus {
     margin-left: 1vw;
     font-size: 32px;
     text-decoration: none;
+    transition: background-color 0.3s ease-out;
+}
+.fa-cart-plus.clicked {
+    color: green; 
+}
+.fa-cart-plus.clicked {
+    animation: return-to-normal 0.4s linear forwards;
+}
+
+@keyframes return-to-normal {
+    from {
+    color: green;
+}
+    to {
+    color: white;
+}
 }
 .nav-links-1, .nav-links-2, .nav-links-3, .nav-links-4 {
     display: none;

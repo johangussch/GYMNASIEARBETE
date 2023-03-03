@@ -31,10 +31,20 @@ main {
 .fa-arrow-left, .back-text {
     font-size: clamp(16px, 3vw, 24px);
 }
-.username {
-    margin-right: 2rem;
-    font-weight: bold;
-    font-size: clamp(14px, 3vw, 24px);
+.nav-home-button {
+    padding: 1vh 1vw 1vh 1vw;
+    background-color: gray;
+    cursor: pointer;
+    border-radius: 0.5vh;
+    color:white;
+    margin-top: 0;
+    font-size: 16px;
+}
+.fa-house {
+    padding-right: 20px;
+}
+.nav-home-button {
+    margin-right: clamp(0px, 3vw, 30px);
 }
 h1 {
     font-size: clamp(24px, 3vw, 54px)
@@ -86,6 +96,9 @@ h1 {
 .item-pic {
     height: 9vh;
 }
+.item-name {
+    font-size: clamp(8px, 0.7vw, 30px)
+}
 .payment {
     display: flex;
     justify-content: space-around;
@@ -121,7 +134,7 @@ p {
     color: white;
     font-size: 24px;
 }
-button:hover {
+.confirm > button:hover {
     background-color: darkgreen;
     transition: 0.5s;
 }

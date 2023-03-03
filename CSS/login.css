@@ -19,23 +19,26 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-left: 2rem;
+    margin-left: clamp(0px, 3vw, 30px);
     display: flex;
     gap: 1.25rem;
     font-size: 24px;
     font-weight: bold;
 }
-.nav-home {
-    margin-right: 2rem;
-}
 .nav-home-button {
-    padding: 1vh 2vw 1vh 2vw;
+    padding: 1vh 1vw 1vh 1vw;
     background-color: gray;
     cursor: pointer;
     border-radius: 0.5vh;
     color:white;
     margin-top: 0;
     font-size: 16px;
+}
+.fa-house {
+    padding-right: 20px;
+}
+.nav-home-button {
+    margin-right: clamp(0px, 3vw, 30px);
 }
 main {
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
@@ -64,8 +67,11 @@ to {
 }
 }
 .formContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
     padding: 16px;
-    width: 40vw;
+    width: clamp(280px, 40vw, 600px);
     background-color: rgb(29, 29, 29);
     border-radius: 4px;
     box-shadow: 0px 0px 8px black;
@@ -90,7 +96,7 @@ input[type="username"],
 input[type="password"] {
     font-size: clamp(16px, 4vw, 24px);
     padding: 7px;
-    width: clamp(100px, 40vw, 600px);
+    /* width: clamp(100px, 35vw, 600px); */
 }
 .login-button {
     font-size: clamp(16px, 4vw, 24px);
@@ -100,7 +106,7 @@ input[type="password"] {
     padding: 14px 20px;
     border: none;
     cursor: pointer;
-    width: clamp(100px, 40vw, 600px);
+    /* width: clamp(100px, 40vw, 600px); */
     margin-top: 10px;
 }
 .buttons{
@@ -130,3 +136,4 @@ footer {
     font-weight: bold;
     border-top: 2px solid black;
 }
+
