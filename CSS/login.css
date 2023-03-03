@@ -131,9 +131,8 @@ footer {
     text-align: center;
     flex-direction: column;
     margin-bottom: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8));
     color: white;
-    font-weight: bold;
-    border-top: 2px solid black;
+    font-size: clamp(10px, 2vw, 24px);
 }
 
