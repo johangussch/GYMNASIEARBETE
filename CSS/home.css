@@ -175,10 +175,6 @@ footer {
     .logo, .nav-account {
         margin: 4vw;
     }
-    .title {
-        display: none;
-    }
-    
 }
 
 @media only screen and (max-width: 768px) {
