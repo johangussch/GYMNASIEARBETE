@@ -106,8 +106,7 @@ input[type="password"] {
     padding: 14px 20px;
     border: none;
     cursor: pointer;
-    /* width: clamp(100px, 40vw, 600px); */
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .buttons{
     cursor: pointer;
